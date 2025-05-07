@@ -14,9 +14,10 @@ body{
     background-color: white;
 }
 
-.fa-compass {
-    color: #fe424d;
+.fa-map-location-dot {
+    color: #f60d1d;
     font-size: 2rem;
+    margin-left: 1rem;
 }
 
 .nav-link {
@@ -56,13 +57,14 @@ body{
 }
 
 /* cards */
-.card {
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
+    border-radius: 1.5rem !important;
 }
 
 .card-image-top {
-    border-radius: 1rem !important;
+    border-radius: 1.5rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }
@@ -100,3 +102,9 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
+
+#map {
+    height: 350px;
+    width: 90vh;
+}
+
