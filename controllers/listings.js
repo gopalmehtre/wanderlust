@@ -17,7 +17,7 @@ module.exports.index = async (req, res, next) => {
     if(!listings.length) {
         req.flash("error", "No results found");
     }
-    return res.render("./listings/index.ejs", {listings, filter});
+    return res.render("/listings/index.ejs", {listings, filter});
     
 };
 
@@ -42,7 +42,7 @@ module.exports.showListing = (async (req, res)=>{
     res.redirect("/listings");
    }
    console.log(listing);
-    res.render("./Listings/show.ejs", {listing});
+    res.render("/Listings/show.ejs", {listing});
 });
 
 module.exports.createListing = async (req, res, next)=>{
@@ -74,7 +74,7 @@ module.exports.renderEditForm = async (req, res)=>{
 
     let originalImageUrl = listing.image.url;
     originalImageUrl = originalImageUrl.replace("/upload", "/upload/h_300, w_250");
-    res.render("./listings/edit.ejs", {listing});
+    res.render("/listings/edit.ejs", {listing});
 };
 
 module.exports.updateListing = async (req, res)=>{
